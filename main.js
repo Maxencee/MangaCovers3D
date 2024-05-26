@@ -18,7 +18,8 @@ import { $ } from "./src/utility";
 
   camera.position.z = 8;
 
-  const renderer = new THREE.WebGLRenderer();
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
 
@@ -56,7 +57,6 @@ import { $ } from "./src/utility";
         texture.wrapT = THREE.RepeatWrapping;
         const bwidth = texture.image.width / 200;
         const bheight = texture.image.height / 200;
-        console.log(bwidth, bheight);
 
         let rx = (cover.clamps[1] - cover.clamps[0]) / 100;
         let ox = cover.clamps[0] / 100;
