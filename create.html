@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create cover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        .main-paste {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .pins-container {
+            position: absolute;
+            width: 100vw;
+            height: 0;
+        }
+
+        .pins-container .pin:nth-child(2) {
+            background-color: purple;
+        }
+        .pins-container .pin:nth-child(2) .pin-move {
+            background-color: green;
+        }
+
+        .pins-container .pin:nth-child(3) {
+            background-color: blue;
+        }
+        .pins-container .pin:nth-child(3) .pin-move {
+            background-color: orange;
+        }
+
+        .pins-container .pin {
+            height: 100vh;
+            width: 2px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 10%;
+        }
+
+        .pins-container .pin .pin-move {
+            width: 50px;
+            height: 50px;
+            border-radius: 80px;
+            background-color: blue;
+            transform: translate(-50%, 0%);
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            line-height: 1.7;
+            user-select: none;
+        }
+
+        .main-paste img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        button {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            color: #1B1B1B;
+            padding: 1rem;
+            outline: 2px solid #1B1B1B;
+            background-color: white;
+            z-index: 99;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+    </style>
+    <script src="create.js" type="module"></script>
+    <div class="pins-container">
+        <div class="pin" id="pin-2"><div class="pin-move">3</div></div>
+        <div class="pin" id="pin-1"><div class="pin-move">2</div></div>
+        <div class="pin" id="pin-0"><div class="pin-move">1</div></div>
+    </div>
+    <div class="main-paste" contenteditable=""></div>
+    <button>Valider</button>
+</body>
+</html>

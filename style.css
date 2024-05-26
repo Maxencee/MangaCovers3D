@@ -1,0 +1,58 @@
+:root {
+    --theme-color: #1a1a1a;
+    --text-color-dark: #1a1a1a;
+    --dark: #1a1a1a;
+
+    --text-color-light: #fcfcfc;
+    --light: #fcfcfc;
+
+    --light-variant: #ededed;
+
+    --secondary: #959595;
+    --secondary-dark: #4a4a4a;
+
+    --dark-transparent: #050505b4;
+    --light-transparent: #5e5e5ee8;
+
+    --pink: #ffb3fc;
+}
+
+::selection {
+    background: var(--pink);
+    color: var(--dark);
+}
+
+html,
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+    color: var(--text-color-dark);
+    background-color: var(--light-variant);
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    border: none;
+    background: none;
+    color: unset;
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    display: block;
+    width: 1em;
+    height: 1em;
+    font-style: normal;
+    user-select: none;
+}
+
+.icon svg {
+    width: 100%;
+    height: 100%;
+}
